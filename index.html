@@ -644,6 +644,7 @@ select.fi {
     <textarea class="fi" id="log-notes" placeholder="今天感覺怎麼樣..." style="min-height:56px"></textarea>
   </div>
   <button class="btn btn-main" onclick="saveLog()">💾 儲存今日紀錄</button>
+  <button class="btn btn-main" style="margin-top:0.5rem;background:var(--accent2);" onclick="sendReport()">📤 送出日報給大花</button>
 </div>
 
 <!-- ── HISTORY ── -->
@@ -960,6 +961,46 @@ function delLog(id) {
     setLogs(logs);
     updateHistory();
     toast('🗑 已刪除');
+  });
+}
+
+// ── Send Report ──
+function sendReport() {
+  const date = document.getElementById('log-date').value || new Date().toISOString().split('T')[0];
+  const logs = getLogs();
+  const log = logs.find(l => l.date === date);
+  if (!log) { toast('⚠️ 請先儲存今日紀錄'); return; }
+
+  const typeName = { dayA:'Day A 上肢拉＋推', dayB:'Day B 下肢', dayC:'Day C 拉＋划船', cardio:'有氧', home:'居家徒手', mat:'墊上運動', rest:'休息日' }[log.type] || '未記錄';
+  const sweetTxt = { unused:'沒用 ✨', used:'用了1格 🍰', free:'自由日 🎉' }[log.sweet] || '';
+  const poopTxt = log.poop === 'yes' ? '有 💩' : '沒有';
+
+  let report = `📋 **Arlene 日報 ${log.date}**\n`;
+  report += `━━━━━━━━━━━━━━━━\n`;
+  if (log.wt) report += `⚖️ 體重：${log.wt} kg\n`;
+  if (log.sl) report += `😴 睡眠：${log.sl} 小時\n`;
+  report += `💪 訓練：${typeName}\n`;
+  if (log.wk) report += `📝 內容：\n${log.wk}\n`;
+  if (log.food) report += `🍽 飲食：\n${log.food}\n`;
+  report += `🍰 甜食：${sweetTxt}\n`;
+  report += `💩 排便：${poopTxt}\n`;
+  if (log.period) report += `🩸 月經訊號：${log.period}\n`;
+  if (log.notes) report += `💭 備註：${log.notes}\n`;
+  report += `━━━━━━━━━━━━━━━━\n`;
+  report += `請大花分析並給明日建議 🙏`;
+
+  navigator.clipboard.writeText(report).then(() => {
+    toast('📋 已複製！請貼到 Discord');
+  }).catch(() => {
+    // Fallback for mobile
+    const ta = document.createElement('textarea');
+    ta.value = report;
+    ta.style.cssText = 'position:fixed;left:-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    toast('📋 已複製！請貼到 Discord');
   });
 }
 
