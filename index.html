@@ -394,51 +394,239 @@ select.fi {
   <div id="h-list"></div>
 </div>
 
-<!-- ── INBODY ── -->
-<div class="pg" id="p-body">
-  <div class="al al-i">📋 最新 InBody：2026/01/26（下次建議空腹早上測）</div>
 
-  <div class="sg sg2">
-    <div class="sp"><div class="v" style="color:var(--accent)">70</div><div class="l">InBody 分數</div></div>
-    <div class="sp"><div class="v">178 cm</div><div class="l">身高</div></div>
+
+<!-- ── PLAN ── -->
+<div class="pg" id="p-plan">
+
+  <div class="st">🏋️ 每週運動課表</div>
+  <div class="al al-i">依大安運動中心設備設計 · 每次約 60 分鐘 · 減脂為主</div>
+
+  <div class="cd" id="plan-sat">
+    <h3>六 — 💪 上肢＋核心＋有氧</h3>
+    <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+🔥 暖身 5 min（橢圓機低阻力）
+
+<b style="color:var(--accent)">重訓（35 min）</b>
+① 坐姿划船 40kg × 12 × 3 組
+② 滑輪下拉 35kg × 12 × 3 組
+③ 推胸機 30kg × 10 × 3 組
+④ 肩推機 20kg × 12 × 3 組
+⑤ 繩索三頭下壓 15kg × 15 × 2 組
+
+<b style="color:var(--warning)">核心（5 min）</b>
+⑥ 捲腹 × 20 × 2 組
+⑦ 棒式 45 秒 × 2 組
+
+<b style="color:var(--danger)">有氧（15 min）</b>
+⑧ 橢圓機 or 上坡快走（心率 130-145）
+    </p>
+    <div class="le-m" style="margin-top:.5rem">
+      <span>⏱ 60min</span><span>🔥 約 350-400 kcal</span>
+    </div>
   </div>
 
-  <div class="st">🏋️ 身體組成</div>
-  <div class="ib-grid">
-    <div class="ib-item warn"><div class="iv" id="ib-fat">28.1 kg</div><div class="il">體脂肪</div></div>
-    <div class="ib-item good"><div class="iv" id="ib-muscle">37.2 kg</div><div class="il">骨骼肌</div></div>
-    <div class="ib-item"><div class="iv">47.8 L</div><div class="il">身體水分</div></div>
-    <div class="ib-item"><div class="iv">13.0 kg</div><div class="il">蛋白質</div></div>
-    <div class="ib-item"><div class="iv">65.4 kg</div><div class="il">除脂體重</div></div>
-    <div class="ib-item"><div class="iv">4.58 kg</div><div class="il">骨礦質</div></div>
+  <div class="cd" id="plan-sun">
+    <h3>日 — 🦵 下肢＋有氧</h3>
+    <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+🔥 暖身 5 min（快走）
+
+<b style="color:var(--accent)">重訓（30 min）</b>
+① 腿推機 80kg × 12 × 4 組
+② 腿彎舉機 30kg × 12 × 3 組
+③ 腿伸展機 25kg × 12 × 3 組
+④ 站姿提踵 × 20 × 2 組
+⑤ 髖外展機 30kg × 15 × 2 組
+
+<b style="color:var(--warning)">核心（5 min）</b>
+⑥ 側棒式 30秒 × 左右各2組
+⑦ 死蟲式 × 12 × 2 組
+
+<b style="color:var(--danger)">有氧（20 min）</b>
+⑧ 橢圓機中高阻力 or 上坡快走
+    </p>
+    <div class="le-m" style="margin-top:.5rem">
+      <span>⏱ 60min</span><span>🔥 約 400-450 kcal</span>
+    </div>
   </div>
 
-  <div class="st">📊 肥胖分析</div>
-  <div class="ib-grid">
-    <div class="ib-item warn"><div class="iv">30.1%</div><div class="il">體脂肪率</div></div>
-    <div class="ib-item warn"><div class="iv">29.5</div><div class="il">BMI</div></div>
-    <div class="ib-item warn"><div class="iv">0.96</div><div class="il">腰臀比</div></div>
-    <div class="ib-item warn"><div class="iv">11</div><div class="il">內臟脂肪 (級)</div></div>
+  <div class="al al-w">💡 腿部大肌群燃脂效率是上肢的 2-3 倍！加入下肢訓練減脂更快。重量先從輕開始，感覺不吃力再往上加。</div>
+
+  <div class="st">🍽 每日飲食菜單</div>
+  <div class="al al-i">目標 ~2050 kcal · 高蛋白低 GI · 不含芋頭南瓜</div>
+
+  <div class="pills" id="meal-pills">
+    <button class="pill on" data-m="weekday">平日（自煮日）</button>
+    <button class="pill" data-m="eatout">平日（外食日）</button>
+    <button class="pill" data-m="weekend">六日（外食日）</button>
   </div>
 
-  <div class="st">🔥 代謝</div>
-  <div class="ib-grid">
-    <div class="ib-item"><div class="iv">1782</div><div class="il">BMR (kcal)</div></div>
-    <div class="ib-item"><div class="iv">~2450</div><div class="il">TDEE (kcal)</div></div>
+  <div id="meal-weekday" class="meal-plan">
+    <div class="cd">
+      <h3>🌅 早餐 ～400 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>方案 A：蛋吐司</b>
+全麥吐司 2 片 + 荷包蛋 1 顆 + 無糖豆漿 450ml
+🛒 全聯：全麥吐司、雞蛋、無糖豆漿
+
+<b>方案 B：燕麥碗</b>
+即食燕麥 40g + 無糖豆漿 300ml + 香蕉半根 + 水煮蛋 1 顆
+🛒 全聯：桂格大燕麥片、香蕉、雞蛋
+
+<b>方案 C：超商快速</b>
+茶葉蛋 2 顆 + 無糖豆漿 + 地瓜 1 小條
+🛒 7-11/全家直接買
+      </p>
+    </div>
+
+    <div class="cd">
+      <h3>☀️ 午餐（自煮）～700 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>方案 A：雞胸蔬菜飯</b>
+白飯半碗(100g) + 煎雞胸 150g + 炒花椰菜 + 炒高麗菜
+🛒 買：雞胸肉、花椰菜、高麗菜、蒜頭
+🔪 做法：雞胸切片用醬油+黑胡椒醃10min，中小火煎至金黃
+
+<b>方案 B：豬里肌便當</b>
+白飯半碗 + 香煎豬里肌 120g + 燙青江菜 + 涼拌小黃瓜
+🛒 買：豬里肌、青江菜、小黃瓜
+🔪 做法：里肌拍薄，撒鹽黑胡椒，大火快煎兩面各1.5min
+
+<b>方案 C：鮭魚味噌湯定食</b>
+白飯半碗 + 煎鮭魚 1 片 + 味噌湯（豆腐+海帶）+ 燙菠菜
+🛒 買：鮭魚切片、嫩豆腐、乾海帶芽、菠菜、味噌
+🔪 做法：鮭魚不用油，不沾鍋中火煎4min翻面3min
+      </p>
+    </div>
+
+    <div class="cd">
+      <h3>🌙 晚餐（外食）～700 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>✅ 推薦選擇：</b>
+• 自助餐：1 肉 3 菜，飯半碗（跟老闆說少一點）
+• 滷味：選豆腐、雞肉、青菜、冬粉（不選加工品）
+• 鹹水雞：去皮雞肉 + 大量蔬菜 + 少量麵條
+• 便當店：排骨/雞腿便當，飯吃半碗就好
+
+<b>❌ 盡量避免：</b>
+• 炸物（鹹酥雞、炸排骨）
+• 勾芡類（羹湯、燴飯）
+• 含糖飲料（改無糖茶或水）
+      </p>
+    </div>
+
+    <div class="cd">
+      <h3>🍎 點心 ～250 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+• 希臘優格 1 杯（無糖）+ 堅果少許
+• 茶葉蛋 1 顆 + 無糖豆漿
+• 香蕉 1 根 + 花生醬 1 湯匙
+• 毛豆 1 小碗
+      </p>
+    </div>
   </div>
 
-  <div class="st">🎯 目標</div>
+  <div id="meal-eatout" class="meal-plan" style="display:none">
+    <div class="cd">
+      <h3>🌅 早餐（同上）～400 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;">同平日方案，或超商茶葉蛋+豆漿+地瓜</p>
+    </div>
+    <div class="cd">
+      <h3>☀️ 午餐（外食）～700 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>✅ 推薦：</b>
+• Subway 6吋（雞肉/火雞，多蔬菜，不加美乃滋）
+• 自助餐（1肉3菜，飯少）
+• 水煮便當/健康餐盒
+• 乾麵+燙青菜+滷蛋（湯麵熱量更低）
+
+<b>⚠️ 注意：</b>
+• 飲料一律無糖
+• 醬料另外放（淋的比拌的少）
+      </p>
+    </div>
+    <div class="cd">
+      <h3>🌙 晚餐（自煮）～700 kcal</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>方案 A：蒜香雞腿排</b>
+雞腿去皮 1 支 + 蒜炒四季豆 + 番茄蛋花湯 + 白飯半碗
+🔪 雞腿用蒜+醬油+米酒醃15min，氣炸鍋180度15min
+
+<b>方案 B：豆腐肉末</b>
+嫩豆腐 1 盒 + 豬絞肉 80g + 蔥花 + 白飯半碗
+🔪 絞肉炒香+醬油+豆腐拌炒，撒蔥花
+
+<b>方案 C：清蒸魚片</b>
+鯛魚片 + 薑絲蒸 8min + 淋醬油 + 炒空心菜 + 飯半碗
+      </p>
+    </div>
+  </div>
+
+  <div id="meal-weekend" class="meal-plan" style="display:none">
+    <div class="cd">
+      <h3>🏋️ 六日運動日飲食重點</h3>
+      <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>運動前（1-2hr）：</b>
+香蕉 1 根 or 全麥吐司 1 片（輕量碳水）
+
+<b>運動後（30min 內）：</b>
+蛋白質飲（豆漿 or 低脂牛奶）+ 茶葉蛋
+
+<b>外食原則：</b>
+• 總量一樣抓 2050 kcal
+• 運動日蛋白質拉高（肉/蛋/豆腐多吃）
+• 碳水可以稍微放寬（飯可以吃到 7 分滿）
+• 依然避免炸物和含糖飲料
+
+<b>✅ 六日外食推薦：</b>
+• 涮涮鍋（蔬菜+肉+蛋+冬粉，不喝湯底）
+• 定食類（魚/豬排定食，飯吃七分）
+• 越南河粉（湯底清，肉+菜）
+• 早午餐（蛋+沙拉+麵包控量）
+
+<b>❌ 避免：</b>
+• 吃到飽（容易失控）
+• 炸雞店
+• 手搖飲（如果真的想喝→無糖）
+      </p>
+    </div>
+  </div>
+
+  <div class="st">🛒 每週採買清單</div>
   <div class="cd">
-    <h3>目標體重 76.9 kg</h3>
-    <p>需減脂 16.6 kg・肌肉量維持<br>
-    每日熱量目標 1950-2100 kcal<br>
-    預估每週減 0.5 kg → 約 33 週</p>
+    <h3>全聯/超市 一次買齊</h3>
+    <p style="color:var(--text);font-size:.72rem;white-space:pre-line;line-height:1.9">
+<b>蛋白質：</b>
+• 雞胸肉 600g（分裝冷凍）
+• 豬里肌 300g
+• 鮭魚/鯛魚 2 片
+• 雞蛋 10 顆
+• 嫩豆腐 2 盒
+• 無糖豆漿 2 瓶
+
+<b>蔬菜（挑 4-5 種）：</b>
+• 花椰菜、高麗菜、青江菜
+• 菠菜、空心菜、四季豆
+• 小黃瓜、番茄
+
+<b>主食：</b>
+• 全麥吐司 1 條
+• 白米（家裡有就不用）
+• 即食燕麥片
+
+<b>調味/其他：</b>
+• 醬油、黑胡椒、鹽
+• 蒜頭、薑、蔥
+• 味噌（小包）
+• 香蕉 3-4 根
+
+<b>💰 預估：$800-1000/週</b>
+    </p>
   </div>
 
-  <div class="al al-w">⚠️ 1/26 數據為飯後測量，實際體脂可能低 1-2%</div>
 </div>
 
-<!-- ── SETTINGS ── -->
+<!-- ── PROFILE (InBody + Settings merged) ── -->
 <div class="pg" id="p-set">
   <div class="st">👤 個人資料</div>
   <div class="cd">
@@ -446,6 +634,19 @@ select.fi {
     生日：1995.11.20（30歲）<br>
     身高：178 cm<br>
     目標：減脂 → 76.9 kg</p>
+  </div>
+
+  <div class="st">🏋️ InBody 數據（2026/01/26）</div>
+  <div class="al al-w">⚠️ 飯後測量，實際體脂可能低 1-2%</div>
+  <div class="ib-grid">
+    <div class="ib-item warn"><div class="iv">28.1 kg</div><div class="il">體脂肪</div></div>
+    <div class="ib-item good"><div class="iv">37.2 kg</div><div class="il">骨骼肌</div></div>
+    <div class="ib-item warn"><div class="iv">30.1%</div><div class="il">體脂肪率</div></div>
+    <div class="ib-item warn"><div class="iv">29.5</div><div class="il">BMI</div></div>
+    <div class="ib-item warn"><div class="iv">0.96</div><div class="il">腰臀比</div></div>
+    <div class="ib-item warn"><div class="iv">11</div><div class="il">內臟脂肪</div></div>
+    <div class="ib-item"><div class="iv">1782</div><div class="il">BMR (kcal)</div></div>
+    <div class="ib-item"><div class="iv">70</div><div class="il">InBody 分數</div></div>
   </div>
 
   <div class="st">⚙️ 熱量設定</div>
@@ -468,9 +669,9 @@ select.fi {
 <div class="nav">
   <button class="nav-b on" data-p="dash"><span class="ic">📊</span>儀表板</button>
   <button class="nav-b" data-p="rec"><span class="ic">📝</span>紀錄</button>
-  <button class="nav-b" data-p="hist"><span class="ic">📋</span>歷史</button>
-  <button class="nav-b" data-p="body"><span class="ic">🏋️</span>InBody</button>
-  <button class="nav-b" data-p="set"><span class="ic">⚙️</span>設定</button>
+  <button class="nav-b" data-p="plan"><span class="ic">📋</span>計畫</button>
+  <button class="nav-b" data-p="hist"><span class="ic">📜</span>歷史</button>
+  <button class="nav-b" data-p="set"><span class="ic">👤</span>我的</button>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -506,8 +707,8 @@ document.getElementById('dlg-ok').onclick=()=>{if(dlgCb)dlgCb();closeDlg();};
 
 // ═══ Navigation ═══
 const scr=document.getElementById('scroll');
-const titles={dash:'安花 Fitness',rec:'每日紀錄',hist:'歷史紀錄',body:'InBody 數據',set:'設定'};
-const subs={dash:'減脂 · 維持 · 健康',rec:'體重 · 運動 · 飲食 · 藥物',hist:'追蹤你的進步',body:'身體組成分析',set:'個人化設定'};
+const titles={dash:'安花 Fitness',rec:'每日紀錄',plan:'課表＆菜單',hist:'歷史紀錄',set:'我的'};
+const subs={dash:'減脂 · 維持 · 健康',rec:'體重 · 運動 · 飲食 · 藥物',plan:'運動課表 · 飲食計畫 · 採買清單',hist:'追蹤你的進步',set:'InBody · 設定 · 資料管理'};
 document.querySelectorAll('.nav-b').forEach(b=>{
   b.addEventListener('click',()=>{
     const p=b.dataset.p;
@@ -843,6 +1044,16 @@ function confirmClear(){
     toast('🗑 已清除所有資料');
   });
 }
+
+// ═══ Meal Plan Tabs ═══
+document.querySelectorAll('#meal-pills .pill').forEach(p=>{
+  p.addEventListener('click',()=>{
+    document.querySelectorAll('#meal-pills .pill').forEach(x=>x.classList.remove('on'));
+    p.classList.add('on');
+    document.querySelectorAll('.meal-plan').forEach(x=>x.style.display='none');
+    document.getElementById('meal-'+p.dataset.m).style.display='block';
+  });
+});
 
 // ═══ Init ═══
 const s=getSettings();
